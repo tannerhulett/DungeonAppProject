@@ -1,4 +1,5 @@
 ﻿using DungeonLibrary;
+using System.Runtime.CompilerServices;
 
 namespace Dungeon
 {
@@ -7,6 +8,75 @@ namespace Dungeon
         static void Main(string[] args)
         {
             #region Title/Introduction
+            bool validRace = false;
+            bool chosen = true;
+            bool noChosen = false;
+
+            Race playerRace = new Race();
+            string raceChoice;
+
+            do
+            {
+                Console.WriteLine("Please choose a race\n" +
+                        "(please enter the number you wish below)\n" +
+                        "\t1.) Human,\n" +
+                        "\t2.) Alien,\n" +
+                        "\t3.) Monster,\n" +
+                        "\t4.) Elf,\n");
+                        
+
+                raceChoice = Console.ReadLine();
+                Console.Clear();
+
+                switch (raceChoice)
+                {
+                    case "1":
+                        playerRace = Race.Human;
+                        validRace = true;
+                        Console.WriteLine($"You chose  {playerRace}\nPress any key to continue...");
+                        ConsoleKey user = Console.ReadKey(true).Key;
+                        if (true)
+                        {
+                            chosen = true;
+                        }
+                        break;
+                    case "2":
+                        playerRace = Race.Alien;
+                        validRace = true;
+                        Console.WriteLine($"You chose  {playerRace}\nPress any key to continue...");
+                        ConsoleKey user2 = Console.ReadKey(true).Key;
+                        if (true)
+                        {
+                            chosen = true;
+                        }
+                        break;
+                    case "3":
+                        playerRace = Race.Monster;
+                        validRace = true;
+                        Console.WriteLine($"You chose  {playerRace}\nPress any key to continue...");
+                        ConsoleKey user3 = Console.ReadKey(true).Key;
+                        if (true)
+                        {
+                            chosen = true;
+                        }
+                        break;
+                    case "4":
+                        playerRace = Race.Elf;
+                        validRace = true;
+                        Console.WriteLine($"You chose  {playerRace}\nPress any key to continue...");
+                        ConsoleKey user4 = Console.ReadKey(true).Key;
+                        if (true)
+                        {
+                            chosen = true;
+                        }
+                        break;
+                    default:
+                        Console.WriteLine("Invalid input, please try again");
+                        break;
+                }
+            } while (!validRace);
+
+
             Console.Title = "Tanner VS Everybody: The Game";
             Console.WriteLine("Are you ready...\n");
             #endregion
@@ -67,6 +137,17 @@ namespace Dungeon
                                 reload = true;
 
                                 score++;
+                                if (score % 3 == 0)
+                                {
+                                    Weapon newWeapon = Weapon.GetWeapon();
+                                    Console.WriteLine($"\nYou found the all mighty {newWeapon.Name}, Do you want this or nah???");
+                                    ConsoleKey userWeaponChoice = Console.ReadKey(true).Key;
+                                    if (userWeaponChoice == ConsoleKey.Y)
+                                    {
+                                        player.EquippedWeapon = newWeapon;
+                                    }
+                                   // Console.WriteLine($"\n);
+                                } //every 3 monsters, drop a new weapon
                             }
                             break;
 

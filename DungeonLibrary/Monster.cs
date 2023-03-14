@@ -50,7 +50,7 @@ namespace DungeonLibrary
             Lizard m3 = new(name: "Gex", hitChance: 50, block: 10, maxLife: 25, maxDamage: 4, minDamage: 1,
                 description: "It's tail time!", bonusBlock: 3, hidePercent: 10);
             Panda m4 = new(name: "Po", hitChance: 65, block: 20, maxLife: 20, maxDamage: 15, minDamage: 1,
-                description: "The dragon warrior, form Kung Fu Panda.", isBig: true);
+                description: "The dragon warrior, from Kung Fu Panda.", isBig: true);
 
             Lizard babyLizard = new();
             Panda babyPanda = new();
