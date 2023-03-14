@@ -24,7 +24,7 @@ namespace Dungeon
             };
             Console.WriteLine("***************** WEAPON *****************");
             Console.WriteLine(w1);
-            //Build and test a Character - include CalcBlock(), CalcHitChance(), CalcDamage()
+            //Build and test a Character - include CalcBlock(), CalcHitChance(), CalcDamaage()
             Player p1 = new("Tanner MF Hulett", 45, 40, 100, Race.Human, w1);
             Console.WriteLine();
             Console.WriteLine("\n\n***************** PLAYER *****************\n");

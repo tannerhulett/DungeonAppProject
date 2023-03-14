@@ -93,5 +93,20 @@ namespace DungeonLibrary
                 $"{MinDamage} to {MaxDamage} Damage\n" +
                 $"Bonus Hit: {BonusHitChance}%\n";
         }
+
+        public static Weapon GetWeapon()
+        {
+            Weapon gun = new Weapon(1, 8, "Ak-47", 10, false, WeaponType.Gun);
+            Weapon sword = new Weapon(2, 10, "Fred", 50, true, WeaponType.Sword);
+            Weapon dagger = new Weapon(3, 8, "Jamal Dagger", 100, true, WeaponType.Dagger);
+            Weapon bow = new Weapon(4, 9, "Semi-Auto Bow", 75, true, WeaponType.Bow);
+            Weapon juul = new Weapon(1, 1, "Electronic Cigarette", 1, true, WeaponType.Juul);
+            Weapon mace = new Weapon(2, 10, "Normal Mace", 50, true, WeaponType.Mace);
+            Weapon axe = new Weapon(2, 10, "Axe Body Spray", 50, true, WeaponType.Axe);
+            List<Weapon> weapons = new List<Weapon>(){
+                gun, sword, dagger, bow, juul, mace, axe
+            };
+            return weapons[new Random().Next(weapons.Count)];
+        }
     }
 }

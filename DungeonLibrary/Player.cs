@@ -26,7 +26,20 @@ namespace DungeonLibrary
             {
                 case Race.Elf:
                     HitChance += 5;
-                    break;               
+                    break;
+
+                case Race.Human:
+                    HitChance += 50;
+                    break;
+
+                case Race.Monster:
+                    HitChance -= 5;
+                    break;
+
+                case Race.Alien:
+                    HitChance += 25;
+                    break;
+
             }            
             #endregion
         }

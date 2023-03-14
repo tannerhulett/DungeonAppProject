@@ -12,7 +12,7 @@ namespace DungeonLibrary
         Sword,
         Dagger,
         Bow,
-        Polearm,
+        Juul,
         Mace,
         Axe,
         Gun,
